@@ -1,0 +1,7 @@
+Database:
+  Tipo: SQLITE #Tipos válidos: MYSQL, SQLITE
+  IP: localhost:3306
+  DB: test
+  User: root
+  Pass: ""
+  Debug: true
