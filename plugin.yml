@@ -1,0 +1,4 @@
+name: AtlasMySQLV2
+version: 2.0
+author: Atlas
+main: com.atlasplugins.atlasmysql.test.Main
