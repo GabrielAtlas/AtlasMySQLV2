@@ -63,3 +63,18 @@ public class Main extends JavaPlugin{
 
 </pre>
 </div>
+<br/>
+<h3>Config.yml:</h3>
+<div class="highlight highlight-source-groovy-gradle">
+<pre>
+  Database:
+  Tipo: SQLITE #Tipos válidos: MYSQL, SQLITE
+  IP: localhost:3306
+  DB: test
+  User: root
+  Pass: ""
+  Debug: true
+
+</pre>
+</div>
+
