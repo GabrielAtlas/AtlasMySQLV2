@@ -4,13 +4,11 @@ import com.atlasplugins.atlasmysql.mysql.interfaces.Storable;
 
 public class User implements Storable{
 
-	private final transient String table;
 	private String key;
 
-	public User(String key, String tableStored) {
+	public User(String key) {
 		super();
 		this.key = key;
-		table = tableStored;
 	}
 
 	public String getKey() {
@@ -18,7 +16,7 @@ public class User implements Storable{
 	}
 
 	public String getTableStored() {
-		return table;
+		return "tabelaNova";
 	}
 
 }

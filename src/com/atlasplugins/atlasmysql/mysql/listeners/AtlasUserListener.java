@@ -31,7 +31,7 @@ public class AtlasUserListener extends AtlasListener{
 				Bukkit.getConsoleSender().sendMessage("§a[AtlasMySQL] Download do usuário efetuado com sucesso.");
 				}
 			}else {
-				userObject = new User(user, "tabelaNova");
+				userObject = new User(user);
 				if(isDebbugable) {
 				Bukkit.getConsoleSender().sendMessage("§a[AtlasMySQL] Usuário "+user+" é novato, criando objeto...");
 				}
