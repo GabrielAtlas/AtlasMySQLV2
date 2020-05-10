@@ -7,6 +7,7 @@ import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 import com.atlasplugins.atlasmysql.mysql.datasources.MySQLDataSource;
+import com.atlasplugins.atlasmysql.mysql.datasources.MySQLHikariDataSource;
 import com.atlasplugins.atlasmysql.mysql.datasources.SQLLiteDataSource;
 import com.atlasplugins.atlasmysql.mysql.interfaces.DataSource;
 import com.atlasplugins.atlasmysql.mysql.interfaces.Storable;
@@ -27,6 +28,9 @@ public class AtlasStorage {
 		if(core.getConfig().getString("Database.Tipo").equalsIgnoreCase("MYSQL")) {
 			this.dataSource = new MySQLDataSource(core, tables);
 			this.dataSourceType = DataSourceType.MYSQL;
+		}else if(core.getConfig().getString("Database.Tipo").equalsIgnoreCase("MYSQL_HIKARI")){
+			this.dataSource = new MySQLHikariDataSource(core, tables);
+			this.dataSourceType = DataSourceType.MYSQL_HIKARI;
 		}else {
 			this.dataSource = new SQLLiteDataSource(core, tables);
 			this.dataSourceType = DataSourceType.SQLLITE;
@@ -63,7 +67,7 @@ public class AtlasStorage {
 
 	
 	public enum DataSourceType{
-		MYSQL,SQLLITE;
+		MYSQL,MYSQL_HIKARI,SQLLITE;
 	}
 	
 }

@@ -33,17 +33,11 @@ public class MySQLDataSource implements DataSource {
 	public MySQLDataSource(JavaPlugin core, String tableName) {
 		this.tables = new ArrayList<String>();
 		this.tables.add(tableName);
-		GsonBuilder gsonBuilder = new GsonBuilder();
-		gsonBuilder.enableComplexMapKeySerialization();
-		gson = gsonBuilder.create();
 		setup(core);
 	}
 
 	public MySQLDataSource(JavaPlugin core, List<String> tables) {
 		this.tables = tables;
-		GsonBuilder gsonBuilder = new GsonBuilder();
-		gsonBuilder.enableComplexMapKeySerialization();
-		gson = gsonBuilder.create();
 		setup(core);
 	}
 
