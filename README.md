@@ -67,8 +67,12 @@ public class Main extends JavaPlugin{
 <h3>Config.yml:</h3>
 <div class="highlight highlight-source-groovy-gradle">
 <pre>
-  Database:
-  Tipo: SQLITE #Tipos válidos: MYSQL, SQLITE
+#Tipos de MySQL:
+# MYSQL_HIKARI = Versão de conexão do plugin mais performática porém consome mais memória & cpu
+# MYSQL =  Versão de conexão do plugin com as threads do próprio SPIGOT/BUKKIT
+# SQLLITE = Utiliza o arquivo "database.sql" como armazenamento.
+Database:
+  Tipo: SQLITE 
   IP: localhost:3306
   DB: test
   User: root
