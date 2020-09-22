@@ -1,13 +1,9 @@
 # AtlasMySQLV2
-<h3>The best and the most compact API for Bukkit MySQL</h3>
+The best and the most compact API for Bukkit MySQL
 
-<br/>
-
-<h3>How to use?</h3>
-<p>
+# How to use?
 In your Main.class, make this:
-<div class="highlight highlight-source-groovy-gradle">
-<pre>
+```java
 package com.atlasplugins.atlasmysql.test;
 
 import org.bukkit.plugin.java.JavaPlugin;
@@ -42,16 +38,11 @@ public class Main extends JavaPlugin{
 	}
 
 }
+```
 
+# Getting Json Object from MySQL
 
-
-</pre>
-</div>
-</p>
-
-<h3>Getting Json Object from MySQL</h3>
-<div class="highlight highlight-source-groovy-gradle">
-<pre>
+```java
   Main.getStorager().get(key) // get a user cached
   Main.getStorager().getDataSource().exists(key, table) //get a user in MySQL or SQLLITE DB
   Main.getStorager().getDataSource().close() //close the datasource connection
@@ -60,17 +51,16 @@ public class Main extends JavaPlugin{
   Main.getStorager().getDataSource().delete(String key, String tableName, boolean async) //Delete a user asynchronously
   Main.getStorager().getDataSource().insert(Storable storable, String tableName, boolean async) // insert a user in MySQL or SQLLITE DB
   Main.getStorager().getDataSource().find(String key, String tableName,  Class<T> clazz) //check if contains a user in MySQL or SQLLITE DB
+```
 
-</pre>
-</div>
-<br/>
-<h3>Config.yml:</h3>
-<div class="highlight highlight-source-groovy-gradle">
-<pre>
-#Tipos de MySQL:
-# MYSQL_HIKARI = Versão de conexão do plugin mais performática porém consome mais memória & cpu
-# MYSQL =  Versão de conexão do plugin com as threads do próprio SPIGOT/BUKKIT
-# SQLLITE = Utiliza o arquivo "database.sql" como armazenamento.
+# Config.yml
+
+
+# Tipos de MySQL:
+ * MYSQL_HIKARI = Versão de conexão do plugin mais performática porém consome mais memória & cpu
+ * MYSQL =  Versão de conexão do plugin com as threads do próprio SPIGOT/BUKKIT
+ * SQLLITE = Utiliza o arquivo "database.sql" como armazenamento.
+ ```yml
 Database:
   Tipo: SQLITE 
   IP: localhost:3306
@@ -78,7 +68,5 @@ Database:
   User: root
   Pass: ""
   Debug: true
-
-</pre>
-</div>
+```
 
